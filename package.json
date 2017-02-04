@@ -2,7 +2,7 @@
   "name": "react-components-t0s",
   "version": "1.0.0",
   "description": "components for react",
-  "main": "index.js",
+  "main": "js/components.js",
   "scripts": {
     "start": "npm run cp-files && (webpack --watch & node serverNode.js)",
     "build": "webpack",
