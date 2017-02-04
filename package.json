@@ -2,12 +2,13 @@
   "name": "t0s-components",
   "version": "1.0.0",
   "description": "components for react",
-  "main": "js/components.js",
+  "main": "public/bundle.js",
   "scripts": {
     "start": "npm run cp-files && (webpack --watch & node serverNode.js)",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cp-files": "cp index.html public"
+    "cp-files": "cp index.html public",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",

@@ -15,7 +15,7 @@ const PRODUCTION_PLUGINS = [
 ];
 
 module.exports = {
-  entry: './js/index.js',
+  entry: './js/components.js',
 
   output: {
     path: 'public',
