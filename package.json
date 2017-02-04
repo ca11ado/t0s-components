@@ -4,11 +4,14 @@
   "description": "components for react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run cp-files && (webpack --watch & node serverNode.js)",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cp-files": "cp index.html public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ca11ado/react-components-t0s.git"
+    "url": "git+https://github.com/ca11ado/react-components.git"
   },
   "keywords": [
     "react"
@@ -18,5 +21,18 @@
   "bugs": {
     "url": "https://github.com/ca11ado/react-components-t0s/issues"
   },
-  "homepage": "https://github.com/ca11ado/react-components-t0s#readme"
+  "homepage": "https://github.com/ca11ado/react-components-t0s#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styled-components": "^1.4.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "webpack": "^2.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0"
+  }
 }
