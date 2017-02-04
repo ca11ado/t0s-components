@@ -1,0 +1,22 @@
+{
+  "name": "react-components-t0s",
+  "version": "1.0.0",
+  "description": "components for react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ca11ado/react-components-t0s.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Khimtsov Anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ca11ado/react-components-t0s/issues"
+  },
+  "homepage": "https://github.com/ca11ado/react-components-t0s#readme"
+}
