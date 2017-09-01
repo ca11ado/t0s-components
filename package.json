@@ -1,5 +1,5 @@
 {
-  "name": "react-components-t0s",
+  "name": "t0s-components",
   "version": "1.0.0",
   "description": "components for react",
   "main": "js/components.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ca11ado/react-components.git"
+    "url": "git+https://github.com/ca11ado/t0s-components.git"
   },
   "keywords": [
     "react"
@@ -19,9 +19,9 @@
   "author": "Khimtsov Anton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ca11ado/react-components-t0s/issues"
+    "url": "https://github.com/ca11ado/t0s-components/issues"
   },
-  "homepage": "https://github.com/ca11ado/react-components-t0s#readme",
+  "homepage": "https://github.com/ca11ado/t0s-components#readme",
   "dependencies": {
     "express": "^4.14.1",
     "react": "^15.4.2",
