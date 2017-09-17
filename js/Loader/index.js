@@ -10,18 +10,18 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import Base from './Base';
 
-export const SmallestRound = styled(Base)`
+const SmallestRound = styled(Base)`
 `;
 
-export const SmallRound = styled(Base)`
+const SmallRound = styled(Base)`
   animation-delay: 1s;
 `;
 
-export const BigRound = styled(Base)`
+const BigRound = styled(Base)`
   animation-delay: 2s;
 `;
 
-function LoaderRound () {
+export function Loader () {
   return (
     <Wrapper>
       <BigRound color={'red'}>
@@ -33,4 +33,43 @@ function LoaderRound () {
   );
 }
 
-module.exports = LoaderRound;
+const DELAY = 300;
+const LoaderLinesWrapper = styled.div`
+  height: 100%
+`;
+
+const LoaderLine = styled.div`
+  height: 100%;
+  background:
+    url(./line.svg) ${props => (props.shift || 0)}px 0/20px 10px;
+`;
+
+export const LoaderLines = React.createClass({
+  getInitialState () {
+    const startPosition = 0;
+    return {
+      content: <LoaderLine shift={startPosition} />,
+      count: startPosition
+    }
+  },
+
+  componentDidMount () {
+    setTimeout(() => {
+
+    }, DELAY);
+  },
+
+  render () {
+    const that = this;
+    setTimeout(function () {
+      const count = that.state.count + 1;
+      that.setState({ content: <LoaderLine shift={count} />, count: count });
+    }, DELAY);
+
+    return (
+      <LoaderLinesWrapper>
+        { this.state.content }
+      </LoaderLinesWrapper>
+    );
+  }
+});

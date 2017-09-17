@@ -2,7 +2,7 @@ const React = require('react');
 const styled = require('styled-components').default;
 
 const Smile = require('./Smile');
-const Loader = require('./Loader');
+import { Loader, LoaderLines } from './Loader';
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,6 +18,9 @@ const App = () => (
     </Wrapper>
     <Wrapper>
       <Loader/>
+    </Wrapper>
+    <Wrapper>
+      <LoaderLines/>
     </Wrapper>
   </div>
 );

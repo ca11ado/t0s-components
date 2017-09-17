@@ -1,5 +1,5 @@
 const Smile = require('./Smile');
-const Loader = require('./Loader');
+import { Loader } from './Loader';
 
 module.exports = {
   Smile,
