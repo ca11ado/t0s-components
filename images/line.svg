@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="1180px" height="690px" viewBox="0 0  1180 690"
-     preserveAspectRatio="xMidYMid meet">
-    <rect id="svgEditorBackground" x="0" y="0" width="1180" height="690"
-          style="fill: none; stroke: none;"/>
-    <rect x="47" y="26" stroke="black" id="e1_rectangle" style="stroke-width: 1px;"
-          width="490" height="36" fill="black"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1180px" height="690px" viewBox="0 0  1180 690" preserveAspectRatio="xMidYMid meet" ><rect id="svgEditorBackground" x="0" y="0" width="1180" height="690" style="fill: none; stroke: none;"/><rect x="1" y="1" stroke="black" id="e1_rectangle" style="stroke-width: 1px;" width="1" height="1" fill="black" ry="0"  rx="0"/></svg>

@@ -33,45 +33,39 @@ export function Loader () {
   );
 }
 
+const DELAY = 300;
 const LoaderLinesWrapper = styled.div`
   width: 200px; 
   height: 200px;
 `;
 
-const LoaderLine1 = styled.div`
+const LoaderLine = styled.div`
   height: 100%;
-  background: url(./line.svg);
-  background-size: 10px 10px;
-`;
-
-const LoaderLine2 = styled.div`
-  height: 100%;
-  background: url(./line.svg);
-  background-size: 10px 10px;
-  background-position: 5px 0;
+  background:
+    url(./line3.svg) ${props => (props.shift || 0)}px 0/1% 10px;
 `;
 
 export const LoaderLines = React.createClass({
   getInitialState () {
+    const startPosition = 0;
     return {
-      content: <LoaderLine1 />,
-      count: 1
+      content: <LoaderLine shift={startPosition} />,
+      count: startPosition
     }
   },
 
   componentDidMount () {
     setTimeout(() => {
 
-    }, 3000);
+    }, DELAY);
   },
 
   render () {
     const that = this;
-    setTimeout(function () {
-      that.state.count === 1
-        ? that.setState({ content: <LoaderLine2 />, count: 2 })
-        : that.setState({ content: <LoaderLine1 />, count: 1 });
-    }, 2000);
+    /*setTimeout(function () {
+      const count = that.state.count + 1;
+      that.setState({ content: <LoaderLine shift={count} />, count: count });
+    }, DELAY);*/
 
     return (
       <LoaderLinesWrapper>
