@@ -39,7 +39,7 @@ const LoaderLinesWrapper = styled.div`
   width: 100%;
 `;
 
-const LoaderLine = styled.div`
+const Line = styled.div`
   height: 100%;
   background:
     url(./line.svg) ${props => (props.shift || 0)}px 0/20px 10px;
@@ -53,17 +53,21 @@ export const LoaderLines = React.createClass({
     }
   },
 
-  render () {
-    const that = this;
-    setTimeout(function () {
-      const count = that.state.count + 1;
-      that.setState({ count: count });
+  componentDidMount() {
+    this.tm = setInterval(() => {
+      const count = this.state.count + 1;
+      this.setState({ count: count });
     }, DELAY);
+  },
 
+  componentWillUnmount() {
+    clearTimeout(this.tm);
+  },
+
+  render () {
     return (
       <LoaderLinesWrapper>
-        { this.state.content }
-        <LoaderLine shift={this.state.count} />
+        <Line shift={this.state.count} />
       </LoaderLinesWrapper>
     );
   }
