@@ -10,6 +10,8 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import Base from './Base';
 
+import { animationRoundBold } from "./animation";
+
 const SmallestRound = styled(Base)`
 `;
 
@@ -67,9 +69,24 @@ export const LoaderLines = React.createClass({
 
   render () {
     return (
-      <LoaderLinesWrapper>
+      <Wrapper>
         <Line shift={this.state.count} />
-      </LoaderLinesWrapper>
+      </Wrapper>
     );
+  }
+});
+
+const RoundBold = styled.div`
+  width: ${(props) => props.size};
+  height: ${(props) => props.size};
+  border: ${(props) => props.size} solid black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: ${(props) => animationRoundBold} 5s infinite linear;
+`;
+
+export const LoaderRoundBold = React.createClass({
+  render () {
+    return <RoundBold size="50px" />;
   }
 });

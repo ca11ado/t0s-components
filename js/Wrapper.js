@@ -2,7 +2,7 @@ const React = require('react');
 const styled = require('styled-components').default;
 
 const Smile = require('./Smile');
-import { Loader, LoaderLines } from './Loader';
+import { Loader, LoaderLines, LoaderRoundBold } from './Loader';
 
 const Wrapper = styled.div`
   display: flex;
@@ -25,6 +25,9 @@ const App = () => (
     </Wrapper>
     <WrapperFixedHeight>
       <LoaderLines/>
+    </WrapperFixedHeight>
+    <WrapperFixedHeight>
+      <LoaderRoundBold/>
     </WrapperFixedHeight>
   </div>
 );
