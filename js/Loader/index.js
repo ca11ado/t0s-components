@@ -33,9 +33,10 @@ export function Loader () {
   );
 }
 
-const DELAY = 300;
+const DELAY = 100;
 const LoaderLinesWrapper = styled.div`
   height: 100%
+  width: 100%;
 `;
 
 const LoaderLine = styled.div`
@@ -48,27 +49,21 @@ export const LoaderLines = React.createClass({
   getInitialState () {
     const startPosition = 0;
     return {
-      content: <LoaderLine shift={startPosition} />,
       count: startPosition
     }
-  },
-
-  componentDidMount () {
-    setTimeout(() => {
-
-    }, DELAY);
   },
 
   render () {
     const that = this;
     setTimeout(function () {
       const count = that.state.count + 1;
-      that.setState({ content: <LoaderLine shift={count} />, count: count });
+      that.setState({ count: count });
     }, DELAY);
 
     return (
       <LoaderLinesWrapper>
         { this.state.content }
+        <LoaderLine shift={this.state.count} />
       </LoaderLinesWrapper>
     );
   }

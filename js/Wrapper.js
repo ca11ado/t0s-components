@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   margin-bottom: 20px;
 `;
 
+const WrapperFixedHeight = styled(Wrapper)`
+  height: 100px;
+`;
+
 const App = () => (
   <div>
     <Wrapper>
@@ -19,9 +23,9 @@ const App = () => (
     <Wrapper>
       <Loader/>
     </Wrapper>
-    <Wrapper>
+    <WrapperFixedHeight>
       <LoaderLines/>
-    </Wrapper>
+    </WrapperFixedHeight>
   </div>
 );
 
