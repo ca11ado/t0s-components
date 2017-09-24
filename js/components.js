@@ -1,8 +1,9 @@
 const Smile = require('./Smile');
-import { Loader } from './Loader';
+import { Loader, LoaderLines } from './Loader';
 
 module.exports = {
   Smile,
-  Loader
+  Loader,
+  LoaderLines
 };
 
