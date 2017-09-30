@@ -5,6 +5,7 @@ import Smile from './Smile';
 import ThinCircleLoader from './Loader/ThinCircle';
 import LinesLoader from './Loader/Lines';
 import RubyLoader from './Loader/Ruby';
+import ThreeBalls from './Loader/ThreeBalls';
 
 const Wrapper = styled.div`
   display: flex;
@@ -32,6 +33,9 @@ export default function () {
       </WrapperFixedHeight>
       <WrapperFixedHeight>
         <RubyLoader/>
+      </WrapperFixedHeight>
+      <WrapperFixedHeight>
+        <ThreeBalls size="10px" speed="3s" theme="#990000" />
       </WrapperFixedHeight>
     </div>
   );

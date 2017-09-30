@@ -1,6 +1,6 @@
 {
   "name": "t0s-components",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "components for react",
   "main": "js/components.js",
   "scripts": {
