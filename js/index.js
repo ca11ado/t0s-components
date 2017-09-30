@@ -1,6 +1,6 @@
-const ReactDOM = require('react-dom');
-const React = require('react');
-const Wrapper = require('./Wrapper');
+import ReactDOM from 'react-dom';
+import React from 'react';
+import Wrapper from './Wrapper';
 
 ReactDOM.render(
   <Wrapper />,

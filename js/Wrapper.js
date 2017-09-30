@@ -1,36 +1,39 @@
-const React = require('react');
-const styled = require('styled-components').default;
+import React from 'react';
+import styled from 'styled-components';
 
-const Smile = require('./Smile');
-import { Loader, LoaderLines, LoaderRoundBold } from './Loader';
+import Smile from './Smile';
+import ThinCircleLoader from './Loader/ThinCircle';
+import LinesLoader from './Loader/Lines';
+import RubyLoader from './Loader/Ruby';
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   border: 1px solid grey;
   margin-bottom: 20px;
+  overflow: hidden;
 `;
 
 const WrapperFixedHeight = styled(Wrapper)`
   height: 100px;
 `;
 
-const App = () => (
-  <div>
-    <Wrapper>
-      <Smile bold='3' baseSize='20'/>
-    </Wrapper>
-    <Wrapper>
-      <Loader/>
-    </Wrapper>
-    <WrapperFixedHeight>
-      <LoaderLines/>
-    </WrapperFixedHeight>
-    <WrapperFixedHeight>
-      <LoaderRoundBold/>
-    </WrapperFixedHeight>
-  </div>
-);
-
-module.exports = App;
+export default function () {
+  return (
+    <div>
+      <Wrapper>
+        <Smile bold='3' baseSize='20'/>
+      </Wrapper>
+      <Wrapper>
+        <ThinCircleLoader/>
+      </Wrapper>
+      <WrapperFixedHeight>
+        <LinesLoader/>
+      </WrapperFixedHeight>
+      <WrapperFixedHeight>
+        <RubyLoader/>
+      </WrapperFixedHeight>
+    </div>
+  );
+}
 

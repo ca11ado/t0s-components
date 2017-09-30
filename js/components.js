@@ -1,9 +1,11 @@
-const Smile = require('./Smile');
-import { Loader, LoaderLines } from './Loader';
+import Smile from './Smile';
+import ThinCircleLoader from './Loader/ThinCircle';
+import LinesLoader from './Loader/Lines';
+import RubyLoader from './Loader/Ruby';
 
-module.exports = {
+export {
   Smile,
-  Loader,
-  LoaderLines
+  ThinCircleLoader,
+  RubyLoader,
+  LinesLoader
 };
-

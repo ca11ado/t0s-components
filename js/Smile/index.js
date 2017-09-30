@@ -1,5 +1,5 @@
-const React = require('react');
-const styled = require('styled-components').default;
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   position: relative;
@@ -85,12 +85,12 @@ const Mouth = styled.div`
   transform: rotate(-30deg);
 `;
 
-const Smile = (props) => {
+export default function (props) {
   const p = {
     baseSize: props.baseSize || 10,
     bold: props.bold || 1
   };
-  
+
   return (
     <Wrapper { ...p }>
       <ArmLeft { ...p } />
@@ -107,5 +107,3 @@ const Smile = (props) => {
     </Wrapper>
   );
 };
-
-module.exports = Smile;
