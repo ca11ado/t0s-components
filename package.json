@@ -2,7 +2,7 @@
   "name": "t0s-components",
   "version": "2.0.0",
   "description": "components for react",
-  "main": "js/components.js",
+  "main": "build/components.js",
   "scripts": {
     "start": "npm run cp-files && (webpack --watch & node serverNode.js)",
     "build": "webpack",
