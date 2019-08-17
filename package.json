@@ -7,7 +7,7 @@
     "start": "npm run cp-files && (webpack --watch --mode=development & node serverNode.js)",
     "build": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cp-files": "mkdir public; cp index.html public; cp ./images/* public/"
+    "cp-files": "mkdir build; cp index.html build; cp ./images/* build/;"
   },
   "repository": {
     "type": "git",

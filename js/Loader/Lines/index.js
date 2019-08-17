@@ -13,7 +13,8 @@ const Line = styled.div`
 
 export default class L extends React.Component {
 
-  constructor () {
+  constructor (props) {
+    super(props);
     const startPosition = 0;
     this.state = {
       count: startPosition
