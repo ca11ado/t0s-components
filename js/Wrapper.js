@@ -19,25 +19,27 @@ const WrapperFixedHeight = styled(Wrapper)`
   height: 100px;
 `;
 
-export default function () {
-  return (
-    <div>
-      <Wrapper>
-        <Smile bold='3' baseSize='20'/>
-      </Wrapper>
-      <Wrapper>
-        <ThinCircleLoader/>
-      </Wrapper>
-      <WrapperFixedHeight>
-        <LinesLoader/>
-      </WrapperFixedHeight>
-      <WrapperFixedHeight>
-        <RubyLoader/>
-      </WrapperFixedHeight>
-      <WrapperFixedHeight>
-        <ThreeBalls size="10px" speed="3s" theme="#990000" />
-      </WrapperFixedHeight>
-    </div>
-  );
+export default class Wr extends React.Component {
+  render() {
+    return (
+      <div>
+        <Wrapper>
+          <Smile bold='3' baseSize='20'/>
+        </Wrapper>
+        <Wrapper>
+          <ThinCircleLoader/>
+        </Wrapper>
+        <WrapperFixedHeight>
+          <LinesLoader/>
+        </WrapperFixedHeight>
+        <WrapperFixedHeight>
+          <RubyLoader/>
+        </WrapperFixedHeight>
+        <WrapperFixedHeight>
+          <ThreeBalls size="10px" speed="3s" theme="#990000" />
+        </WrapperFixedHeight>
+      </div>
+    );
+  }
 }
 
