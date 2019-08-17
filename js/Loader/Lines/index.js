@@ -13,12 +13,13 @@ const Line = styled.div`
 
 export default class L extends React.Component {
 
-  getInitialState () {
+  constructor () {
     const startPosition = 0;
-    return {
+    this.state = {
       count: startPosition
     }
-  }
+  } 
+
 
   componentDidMount() {
     this.tm = setInterval(() => {
