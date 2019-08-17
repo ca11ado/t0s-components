@@ -6,11 +6,6 @@ const PRODUCTION_PLUGINS = [
       'NODE_ENV': JSON.stringify('production')
     }
   }),
-  new webpack.optimize.UglifyJsPlugin({
-    compress:{
-      warnings: true
-    }
-  }),
   new webpack.optimize.OccurrenceOrderPlugin()
 ];
 
@@ -24,9 +19,24 @@ module.exports = {
   },
 
   module: {
-    loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?presets[]=es2015&presets[]=react' }
+    rules: [
+      { 
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        loader: 'babel-loader',
+        options: {
+					plugins: ['syntax-dynamic-import'],
+          presets: [
+            ['@babel/preset-react'],
+						['@babel/preset-env', { modules: false }]
+          ]
+        }
+      }
     ]
+  },
+
+  optimization: {
+    minimize: true
   }
 };
 

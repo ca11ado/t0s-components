@@ -11,24 +11,25 @@ const Line = styled.div`
   background-size: 20px 10px;
 `;
 
-export default React.createClass({
+export default class L extends React.Component {
+
   getInitialState () {
     const startPosition = 0;
     return {
       count: startPosition
     }
-  },
+  }
 
   componentDidMount() {
     this.tm = setInterval(() => {
       const count = this.state.count + 1;
       this.setState({ count: count });
     }, DELAY);
-  },
+  }
 
   componentWillUnmount() {
     clearTimeout(this.tm);
-  },
+  }
 
   render () {
     return (
@@ -37,4 +38,4 @@ export default React.createClass({
       </Wrapper>
     );
   }
-});
+}

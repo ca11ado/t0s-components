@@ -12,8 +12,8 @@ const Sun = styled.div`
   animation: ${(props) => animation} 5s infinite linear;
 `;
 
-export default React.createClass({
+export default class S extends React.Component {
   render () {
     return <Sun size="50px" />;
   }
-});
+};

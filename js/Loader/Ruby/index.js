@@ -12,8 +12,8 @@ const RoundBold = styled.div`
   animation: ${(props) => animationRoundBold} 5s infinite linear;
 `;
 
-export default React.createClass({
+export default class R extends React.Component {
   render () {
     return <RoundBold size="50px" />;
   }
-});
+}

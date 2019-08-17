@@ -17,7 +17,7 @@ const Ball = styled.div`
   animation: ${(props) => animation} ${props => props.speed} ${props => props.delay} infinite;
 `;
 
-export default React.createClass({
+export default class B extends React.Component {
   render () {
     const { speed = '1s', size = '10px', theme = '#000' } = this.props;
     const [, speedInNumbers = '1000', timeString = 'ms'] = speed.match(/(\d*)(\w*)/);
@@ -34,4 +34,4 @@ export default React.createClass({
       </Wrapper>
     );
   }
-});
+}
