@@ -10,11 +10,14 @@ const PRODUCTION_PLUGINS = [
 ];
 
 module.exports = {
-  entry: './js/index.js',
+  entry: {
+    index: './js/index.js',
+    components: './js/components.js'
+  },
 
   output: {
     path: __dirname + '/build',
-    filename: 'components.js',
+    filename: '[name].js',
     publicPath: '/'
   },
 

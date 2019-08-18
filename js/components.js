@@ -5,9 +5,11 @@
 import ThreeBallsLoader from './Loader/ThreeBalls';
 
 export {
+  /*
   Smile,
   ThinCircleLoader,
   RubyLoader,
   LinesLoader,
+  */
   ThreeBallsLoader
 };
