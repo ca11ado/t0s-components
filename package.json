@@ -22,14 +22,12 @@
     "url": "https://github.com/ca11ado/t0s-components/issues"
   },
   "homepage": "https://github.com/ca11ado/t0s-components#readme",
-  "dependencies": {
-  },
-  "peerDependencies": {
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2"
-  },
-  "devDependencies": {
+    "styled-components": "^4.3.2",
     "express": "^4.17.1",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
