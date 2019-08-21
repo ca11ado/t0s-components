@@ -26,14 +26,7 @@ module.exports = {
       { 
         test: /\.js$/, 
         exclude: /node_modules/, 
-        loader: 'babel-loader',
-        options: {
-					plugins: ['syntax-dynamic-import'],
-          presets: [
-            ['@babel/preset-react'],
-						['@babel/preset-env', { modules: false }]
-          ]
-        }
+        loader: 'babel-loader'
       }
     ]
   },
