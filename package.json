@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "components for react",
   "main": "build/components.js",
+  "module": "js/components.js",
   "scripts": {
     "start": "npm run cp-files && (webpack --watch --mode=development & node serverNode.js)",
     "build": "webpack --mode=production",
